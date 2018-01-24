@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Select list</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" defer></script>
+	<script src="js/common.js" defer></script>
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<div class="select-menu">
+		<p>Услуги</p>
+		<select class="select-box-1 select-box">
+			<!--<option></option>-->
+			<option value="val1">стрижка</option>
+			<option value="val2">бритье</option>
+			<option value="val3">покраска ногтей</option>
+		</select>
+	</div>
+	<div class="select-menu">
+		<p>Вид услуги</p>
+		<select class="select-box-2 select-box">
+			<option></option>
+			<option id="op1" class="hidden-op" value="val11">Короткая</option>
+			<option id="op2" class="hidden-op" value="val12">Длинная</option>
+			<option id="op3" class="hidden-op" value="val21">Бритье 1</option>
+			<option id="op4" class="hidden-op" value="val22">Бритье 2</option>
+			<option id="op5" class="hidden-op" value="val31">Ногти, зеленый</option>
+			<option id="op6" class="hidden-op" value="val32">Ногти, синий</option>
+		</select>
+	</div>
+	<div class="block-select-menu">
+		<label>
+            <input id="check1" class="checkbox" type="checkbox" name="checkbox-test1">
+            <span class="checkbox-custom"></span>
+            <span class="label">Чистка обуви</span>
+        </label>
+    <br />
+        <label>
+            <input id="check2" class="checkbox" type="checkbox" name="checkbox-test2">
+            <span class="checkbox-custom"></span>
+            <span class="label">Доп. услуга 2</span>
+        </label>
+    </div>
+    <div class="total-group">
+    	<div class="total"><span>итого:&#32;</span></div>
+    	<div class="total" id="amount">0</div>
+    	<div class="total"><p>руб.</p></div>
+    </div>
+
+</body>
+</html>

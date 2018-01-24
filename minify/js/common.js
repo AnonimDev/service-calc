@@ -1,0 +1,1 @@
+$(document).ready(function(){var e=$(".select-box option:selected").text();switch(console.log(e),e){case"val1":console.log("val1");break;case"val2":console.log("val2");break;case"val3":console.log("val3")}});
