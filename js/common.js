@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	
 	function q(a) {
-		var s;
         var selec;
 		var se = $('.select-box-2');
 
