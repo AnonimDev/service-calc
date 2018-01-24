@@ -1,82 +1,53 @@
 $(document).ready(function(){
 	
-	function q() {
-		var service = $('.select-box-1 option:selected').val();
+	function q(a) {
+        var selec;
 		var se = $('.select-box-2');
-		var op1 = $('#op1');
-		var op2 = $('#op2');
-		var op3 = $('#op3');
-		var op4 = $('#op4');
-		var op5 = $('#op5');
-		var op6 = $('#op6');
-		
-		op1.hide();
-		op2.hide();
-		op3.hide();
-		op4.hide();
-		op5.hide();
-		op6.hide();
-		//console.log(service);
 
-		switch (service){
-			case 'val1':  // if (x === 'value1')
-		    //se.empty();
-		    $(".select-box-2 :nth-child(1)").attr("selected", "selected");
-		    var selec = 'val1';
-		    op1.show();
-		    op2.show();
-		    
-		    //clearIntelval(q);
-		    //console.log("val1");
+		se.empty();
+
+		switch (a){
+			case 'val1':
+		    selec = 'val1';
+			se.append('<option id="op1" value="val11">Короткая</option>');
+			se.append('<option id="op2" value="val12">Длинная</option>');
 		    break;
-		    case 'val2':  // if (x === 'value1')
-		     //se.empty();
-		     $(".select-box-2 :nth-child(1)").attr("selected", "selected");
-		    var selec = 'val2';
-		    op3.show();
-		    op4.show();
-		    
-		    //clearIntelval(q);
-		    //console.log("val2");
+		    case 'val2':
+		    selec = 'val2';
+		    se.append('<option id="op3" value="val21">Бритье 1</option>');
+		    se.append('<option id="op4" value="val22">Бритье 2</option>');
 		    break;
-		    case 'val3':  // if (x === 'value1')
-		     //se.empty();
-		     $(".select-box-2 :nth-child(1)").attr("selected", "selected");
-		    var selec = 'val3';
-		    op5.show();
-		    op6.show();
-		    
-		    //clearIntelval(q);
-		    //console.log("val3");
+		    case 'val3':
+		    selec = 'val3';
+		    se.append('<option id="op5" value="val31">Ногти, зеленый</option>');
+		    se.append('<option id="op6" value="val32">Ногти, синий</option>');
 		    break;
 		}
-		//console.log("ready");
 	}
 	function w() {
-		var net = 0;
 		var amount = $('#amount');
 
 		var service2 = $('.select-box-2 option:selected').val();
 		var n = 0;
-		var t = 0;//200
-		var y = 0;//150
+		var t = 0;
+		var y = 0;
 		switch (service2){
-			case 'val11':  // if (x === 'value1')
+			case 'val11':
 		    	n = 500;
 		    break;
-		    case 'val12':  // if (x === 'value1')
+		    case 'val12':
 				n = 700;
 		    break;
-		    case 'val21':  // if (x === 'value1')
+		    case 'val21':
 		    	n = 300;
 		    break;
-		    case 'val22':  // if (x === 'value1')
+		    case 'val22':
 		    	n = 400;
 		    break;
-		    case 'val31':  // if (x === 'value1')
+		    case 'val31':
 				n = 200;
 		    break;
-		    case 'val32':  // if (x === 'value1')
+		    case 'val32':
 		    	n = 250;
 		    break;
 		}
@@ -93,8 +64,9 @@ $(document).ready(function(){
 
 	}
 
-
-
 	var w = setInterval(w, 50);
-	var q = setInterval(q, 200);
+
+    $('.select-box-1').change(function() {
+		q($(this).val());
+    });
 });
